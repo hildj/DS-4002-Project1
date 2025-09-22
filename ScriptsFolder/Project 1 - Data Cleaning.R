@@ -21,4 +21,5 @@ colnames(amazonreviews) <- gsub("/", "_", colnames(amazonreviews)) # clean colum
 amazonreviews <- amazonreviews %>% select(-`NA.`) # remove NAs
 
 # export as csv
+
 write.csv(reviews, "Amazonreviews.csv", row.names = FALSE)
