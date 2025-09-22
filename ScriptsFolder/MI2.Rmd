@@ -1,0 +1,78 @@
+---
+title: "MI2"
+author: "Bharathi Thambidurai"
+date: "2025-09-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+## LOAD PACKAGES HERE
+library(tidyverse)
+library(tidytext)
+library(SnowballC)
+library(gridExtra)
+library(grid)
+library(viridis)
+library(wordcloud)
+```
+
+# Word Cloud
+
+```{r}
+amazon.words <- amazonreviews %>%
+  unnest_tokens(word, review.summary) %>% # extract words in review.summary column
+  mutate(word = str_extract(word, "[0-9a-z']+"),
+         word.stem = wordStem(word)) # extract word stems from words
+  
+amazon.words <- amazon.words %>%
+  anti_join(stop_words, by = "word") %>% 
+  drop_na() # remove stop_words
+
+
+# table shows words that appear most frequently
+word.count.table <- amazon.words %>%
+  group_by(word) %>%
+  summarise(word_count = dplyr::n()) %>%
+  arrange(desc(word_count))
+
+# based on words that showed up too frequently but aren't going to help us understand content in the review
+new_stop_words <- tibble(word = c("product", "2", "bought", "time","day","taking","found","buy","3","amazon","item", "l", "5","purchased","makes", "recommend","review"))
+
+# remove new stop words
+amazon.words <- amazon.words %>%
+  anti_join(new_stop_words, by = "word")
+
+# identify most frequent words after removing stop words
+word.count.table <- amazon.words %>%
+  group_by(word) %>%
+  summarise(word_count = dplyr::n()) %>%
+  arrange(desc(word_count))
+
+
+amazon.words <- amazon.words %>%
+  mutate(word = wordStem(word)) 
+
+top_words <- amazon.words %>%
+  dplyr::count(word, sort = TRUE)
+
+# top 50 words for word cloud
+top50 <- top_words %>%
+  slice_max(n, n = 50)
+
+# create word cloud
+wordcloud(words = top50$word,
+          freq = top50$n,
+          max.words = 50,
+          colors = viridis::viridis(50),
+          random.order = FALSE)
+ 
+```
+
+
+
+
