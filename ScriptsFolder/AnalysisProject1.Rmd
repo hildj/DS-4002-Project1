@@ -1,0 +1,88 @@
+---
+title: "Analysis"
+output:
+  pdf_document: default
+  html_document: default
+date: "2025-09-22"
+---
+
+
+```{r}
+library(ISLR2)      
+library(MASS)       
+library(tidyverse)  
+library(caret)      
+data1 <- read.csv('AmazonWithScores.csv')
+data1 <- na.omit(data1)
+```
+
+```{r}
+#train_idx <- sample(1:1264,1000) #sampled data to split into train and test
+data1_train <- read.csv('trainingdata.csv')
+data1_test  <- read.csv('testdata.csv')
+table(data1$review.score)
+
+lda_fit <- lda(factor(review.score) ~but_count + pos + neg + compound + Num_Words + Num_Exclamations, data = data1_train)
+lda_fit
+```
+
+This is the output of the lda. As seen, there is a major class imbalance as about 56 percent of the observations scored a 5, while every other class has no more than 15 percent. In looking at the coefficients of linear discriminants, we can see that certainly pos, neg, and compound contribute a lot to our model due to their very nonzero coefficients. However, the other variables may not be as important since those coefficients are small and close to 0. We will try and refit model to test better prediction.
+
+
+```{r}
+lda_pred <- predict(lda_fit, data1_test)
+names(lda_pred)
+head(lda_pred$posterior)
+head(lda_pred$class)
+
+real_val <- factor(data1_test$review.score)
+
+tab_lda <- table(Predicted = lda_pred$class, Actual = real_val)
+tab_lda
+acc_lda <- mean(lda_pred$class == real_val)
+acc_lda
+caret::confusionMatrix(lda_pred$class, real_val)
+```
+
+As seen, our model ended up predicting a lot of 5s and 1s. Especially, the heavy prediction of 5s is due to the heavy class imbalance.
+
+
+```{r}
+pred_number <- as.numeric(lda_pred$class)
+score_number <- as.numeric(data1_test$review.score)
+
+within_one <- (pred_number == score_number) | ((pred_number + 1) == score_number) | ((pred_number - 1) == score_number)
+sum(within_one)/length(within_one)
+```
+
+In looking at our quantifiable goal of predicting about 80 percent, we see we fell a little short of it with this model as we are at 75 percent. In looking at the coefficients earlier, I will try to remove those predictors that did not have high coefficient values to see if this helps the model.
+
+```{r}
+lda_fit <- lda(factor(review.score) ~ + pos + neg + compound, data = data1_train)
+lda_fit
+```
+
+```{r}
+lda_pred <- predict(lda_fit, data1_test)
+names(lda_pred)
+head(lda_pred$posterior)
+head(lda_pred$class)
+
+real_val <- factor(data1_test$review.score)
+
+tab_lda <- table(Predicted = lda_pred$class, Actual = real_val)
+tab_lda
+acc_lda <- mean(lda_pred$class == real_val)
+acc_lda
+caret::confusionMatrix(lda_pred$class, real_val)
+```
+
+```{r}
+pred_number <- as.numeric(lda_pred$class)
+score_number <- as.numeric(data1_test$review.score)
+
+within_one <- (pred_number == score_number) | ((pred_number + 1) == score_number) | ((pred_number - 1) == score_number)
+sum(within_one)/length(within_one)
+```
+
+As seen, the model did not improve from this for this. Our accuracy and quantifiable goal have gotten worse with that change.
