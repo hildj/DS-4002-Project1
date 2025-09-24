@@ -38,8 +38,11 @@ review.UserID (User IDs) will be treated as anonymous identifiers to protect pri
 | Num_Words | Number of words in the review text | 104, 308|
 
 ## Exploratory Plots
-![This word cloud, obtained by finding which words appear the most often in reviews, quickly shows that reviews either focused on loving a product or thinking a product was bad. There are also a lot of words that point out what most of the functionality of the health-related products are.](../OUTPUT/wordcloud.png)
+![Wordcloud](../OUTPUT/wordcloud.png)
+This word cloud, obtained by finding which words appear the most often in reviews, quickly shows that reviews either focused on loving a product or thinking a product was bad. There are also a lot of words that point out what most of the functionality of the health-related products are.
 
-![This box plot shows that a higher compound score generally correlates with a better review score.](../OUTPUT/boxplot.png)
+![Boxplot](../OUTPUT/boxplot.png)
+This box plot shows that a higher compound score generally correlates with a better review score.
 
-![This scatter plot shows the relationship between review score and review length (number of words), with points colored by sentiment category (positive, neutral, negative). It highlights patterns in how review length varies with sentiment and star rating, providing insight into whether longer reviews tend to express stronger positive or negative opinions. This complements our other exploratory plots by adding a structural perspective on review text, supporting feature selection for predictive modeling.](../OUTPUT/scatterplot.png)
+![Scatterplot](../OUTPUT/scatterplot.png)
+This scatter plot shows the relationship between review score and review length (number of words), with points colored by sentiment category (positive, neutral, negative). It highlights patterns in how review length varies with sentiment and star rating, providing insight into whether longer reviews tend to express stronger positive or negative opinions. This complements our other exploratory plots by adding a structural perspective on review text, supporting feature selection for predictive modeling.
