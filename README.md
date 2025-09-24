@@ -17,3 +17,16 @@ These instructions should be written in straightforward plain English, but they 
 user to reproduce your results without much difficulty. N.B. This section will be crucial for the CS1 assignment, where you'll be required to reproduce the results of other groups.
 
 Therefore, make sure to explain this section thoroughly.
+
+Examples below
+    # Main Heading
+    ## Subheading
+    ### Smaller Subheading
+
+        **Bold text**
+    *Italic text*
+    * Unordered list item 1
+    * Unordered list item 2
+
+    1. Ordered list item 1
+    2. Ordered list item 2
