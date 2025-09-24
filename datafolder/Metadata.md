@@ -35,6 +35,8 @@ review.UserID (User IDs) will be treated as anonymous identifiers to protect pri
 | Num_Characters | Number of characters in the review test |407, 567|
 | Num_Words | Number of words in the review text | 104, 308|
 
-
-
 # Exploratory Plots
+
+
+
+
