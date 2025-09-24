@@ -1,22 +1,26 @@
-Goal: This file serves as an orientation to everyone who comes to your repository, it should enable them to get their bearings. 
+# Amazon Product Reviews
+This repo contains a dataset of Amazon product reviews, which we have condensed to just health-related products in order to compare review text to review ratings. 
 
-● Use markdown headers to divide content.
+## Contents of this repository
+This repository contains everything needed to reproduce the analyses and results for **<Amazon Product Reviews>**: raw and processed data (where allowed), data-preparation scripts, analysis notebooks/R Markdown files that produce figures and tables, and final results (figures, tables, HTML/PDF report). Use the sections below for software requirements, a map of the folder structure, and exact reproduction steps.
 
-● Make an H2 (##) section explaining the contents of the repository 
+## Section 1: Software and platform
+**Software used**
+- **Python** using the VADER package to calculate sentiment scores
+- **R** for data cleaning, EDA, and building logistic regression model
+- **Jupyter Notebook** for ...
+- **Git** for version control and GitHub for hosting.
 
-● Section 1: Software and platform section ○ The type(s) of software you used for the project.
+**Add-on R packages required (install with `install.packages()` or via `renv`)**
+- `tidyverse` (includes `dplyr`, `ggplot2`, `readr`, `tibble`, etc.)
+- `rmarkdown`, `knitr` (rendering reports)
 
-  ○ The names of any add-on packages that need to be installed with the software. ○ The platform (e.g., Windows, Mac, or Linux) you used. 
+## Section 2: Map of Documentation
 
-● Section 2: A Map of your documentation. In this section, you should provide an outline or tree illustrating the hierarchy of folders and subfolders 
-contained in your Project Folder, and listing the files stored in each folder or subfolder.
+## Section 3: How to reproduce our results
 
-● Section 3: Instructions for reproducing your results. In this section, you should give explicit step-by-step instructions to reproduce the Results of your study.
 
-These instructions should be written in straightforward plain English, but they must be concise, but detailed and precise enough, to make it possible for an interested 
-user to reproduce your results without much difficulty. N.B. This section will be crucial for the CS1 assignment, where you'll be required to reproduce the results of other groups.
 
-Therefore, make sure to explain this section thoroughly.
 
 Examples below
     # Main Heading
