@@ -1,0 +1,3 @@
+# Data Summary
+
+Our dataset consists of Amazon product reviews, specifically focused on Health-related products. It includes 1,265 rows and 17 columns with information such as product name, product ID, reviewer name, reviewer ID, product rating, text review, and a sentiment score generated using the VADER sentiment analysis tool. Product examples include armrest covers, foot cushions, socks, and medicine, with prices ranging from $1–$99. The dataset has been cleaned and transformed from its original TXT format into a CSV file to allow for structured analysis. The cleaned dataset is available in our GitHub repository: DS-4002-Project1 / datafolder / AmazonWithScores.csv https://github.com/hildj/DS-4002-Project1 
