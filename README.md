@@ -36,38 +36,43 @@ testdata.csv – Test dataset (≈20% of observations from AmazonWithScores.csv)
 trainingdata.csv – Training dataset (≈80% of observations). <br>
 Amazonreviews.csv – Raw dataset. <br>
 
-## Section 3 – Instructions for Reproducing Our Results
+## Section 3 – How to Reproduce Our Results
 
-Follow these steps to fully reproduce the analyses and figures from this project.
+If you want to reproduce our analysis and see all the figures and tables from our project, follow these steps:
 
-1. **Clone or Download the Repository**  
-   - Clone using Git:  
+1. **Get the Repository**
+   - Clone the repo using Git:
      ```bash
      git clone https://github.com/hildj/DS-4002-Project1.git
-     ```  
-   - Or click **Code → Download ZIP** and extract the folder.
+     ```
+   - Or download it as a ZIP file and extract it.
+   - Open RStudio and set your working directory to the project folder.
 
-2. **Required Data Files**  
-   Make sure the following CSV files remain in the **same directory** as `AnalysisProject1.Rmd`:
-   - `AmazonWithScores.csv`
-   - `trainingdata.csv`
-   - `testdata.csv`
+2. **Make Sure the Data Files Are There**
+   - The following CSV files need to be in the **same folder** as `AnalysisProject1.Rmd`:
+     - `AmazonWithScores.csv`
+     - `trainingdata.csv`
+     - `testdata.csv`
+   - These files are included in the repository, so you shouldn’t need to download anything else.
 
-3. **Software and Packages**  
-   - **R** (version 4.0 or higher) with RStudio recommended.  
-   - Install these R packages if they are not already installed:
+3. **Install R and Packages**
+   - We used **R** (version 4.0 or higher) and RStudio.
+   - Install the packages we used if you don’t already have them:
      ```r
      install.packages(c("tidyverse", "dplyr", "ggplot2",
                         "tidytext", "caret", "knitr", "rmarkdown"))
      ```
 
-4. **Run the Analysis**  
-   - Open `AnalysisProject1.Rmd` in RStudio.  
-   - Click **Knit** (or run all code chunks) to execute the script.
+4. **Run the Analysis**
+   - Open `AnalysisProject1.Rmd` in RStudio.
+   - Click **Knit** to run all the code and generate the full report.
+   - This will produce the HTML (or PDF) report with all of our results, including plots, tables, and model outputs.
 
-5. **Output**  
-   - A knitted HTML or PDF report will be produced containing all plots, tables, and model results that appear in the project deliverables.
+5. **Troubleshooting**
+   - Make sure your working directory is the project folder and the CSV files are in the right place.
+   - If anything seems off, you can run `sessionInfo()` in R to check your package versions.
 
-These steps will recreate the cleaned dataset analysis, sentiment scoring, and predictive modeling exactly as presented in our report.
+Following these steps will let you reproduce everything from our project exactly as we did.
+
 
 
