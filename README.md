@@ -16,25 +16,25 @@ This repository contains everything needed to reproduce the analyses and results
 - `rmarkdown`, `knitr` (rendering reports) , `vader`
 
 ## Section 2: Map of Documentation
-1. OUTPUT folder
-   A. AnalysisProject1.pdf - Analysis of Project with Output (Coefficients, Confusion Matrices)
-   B. boxplot.png - Box Plot of Compound Scores vs Review Score
-   C. scatterplot.png - Scatter Plot of Review Score vs Review Length by Sentiment
-   D. wordcloud.png - Word Cloud
+1. OUTPUT Folder
+AnalysisProject1.pdf – Full project analysis with output (coefficients, confusion matrices).
+boxplot.png – Box plot of compound scores vs. review score.
+scatterplot.png – Scatter plot of review score vs. review length by sentiment.
+wordcloud.png – Word cloud visualization.
 2. ScriptsFolder
-   A. Project 1- Data Cleaning.R
-   B. ScatterPlot_EdaPlots.ipynb - Making Scatter Plots
-   C. Word Clouds.Rmd - Script to make word clouds
-   D. AnalysisProject1.Rmd - Analysis Script
-   E. AnalysisProject1.Rmd - Updated Analysis Script with Headers Added
-   F. BoxPlotScript.R - Script to make box plot
-   G. MakeDatawithVader.R - Transforming Data with Vader
-3. data folder
-   A. AmazonWithScores.csv - full data with VADER scores and word length etc
-   B. Metadata.md - metadata md file
-   C. testdata.csv - test data used on model (about 20 percent of observations from AmazonWithScores.csv)
-   D. trainingdata.csv - training data used to fit model (about 80 percent of data)
-   E. Amazonreviews.csv - raw data 
+Project 1- Data Cleaning.R – Data cleaning script.
+ScatterPlot_EdaPlots.ipynb – Exploratory scatter plots.
+Word Clouds.Rmd – Script for generating word clouds.
+AnalysisProject1.Rmd – Main analysis script.
+AnalysisProject1 (Updated).Rmd – Updated analysis script with headers added.
+BoxPlotScript.R – Script to generate box plot.
+MakeDatawithVader.R – Script for transforming data with VADER sentiment analysis.
+3. data Folder
+AmazonWithScores.csv – Full dataset with VADER scores, word length, etc.
+Metadata.md – Metadata description file.
+testdata.csv – Test dataset (≈20% of observations from AmazonWithScores.csv).
+trainingdata.csv – Training dataset (≈80% of observations).
+Amazonreviews.csv – Raw dataset.
 
 ## Section 3: How to reproduce our results
 To reproduce our results from the analysis, take the AnalysisProject1.Rmd and put it into R. You will want to download the AmazonWithScores.csv, testdata.csv, and trainingdata.csv. Put this data in the same folder as AnalysisProject1.Rmd, and run the whole script. This should allow for full reproducibility of the anlysis from the project.
