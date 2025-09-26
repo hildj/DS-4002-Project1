@@ -1,3 +1,13 @@
+# -------------------------------------------------------
+# Script: DataCleaning.R
+# Purpose: Clean raw Amazon Health product review data.
+# Key Info: Removes missing or incomplete entries, punctuation,
+# stopwords, special characters, converts text to lowercase.
+# Prepares data for sentiment analysis and feature engineering.
+# Output: Cleaned CSV ready for analysis.
+# -------------------------------------------------------
+
+
 library(dplyr)
 
 
@@ -23,3 +33,4 @@ amazonreviews <- amazonreviews %>% select(-`NA.`) # remove NAs
 # export as csv
 
 write.csv(reviews, "Amazonreviews.csv", row.names = FALSE)
+
