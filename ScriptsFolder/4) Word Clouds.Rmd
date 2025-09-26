@@ -1,3 +1,11 @@
+# -------------------------------------------------------
+# Script: 4 EDA_WordClouds.R
+# Purpose: Generate word clouds to visualize frequent words by sentiment.
+# Key Info: Highlights common positive, neutral, and negative terms.
+# Input: Cleaned or sentiment-labeled dataset
+# Output: Word cloud images for EDA
+# -------------------------------------------------------
+
 ---
 title: "MI2"
 author: "Bharathi Thambidurai"
@@ -72,6 +80,7 @@ wordcloud(words = top50$word,
           random.order = FALSE)
  
 ```
+
 
 
 
