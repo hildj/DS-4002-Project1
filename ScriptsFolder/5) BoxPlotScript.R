@@ -1,3 +1,12 @@
+# -------------------------------------------------------
+# Script: BoxPlot.R
+# Purpose: Visualize distribution of sentiment scores across review ratings.
+# Key Info: Helps check whether sentiment scores align with star ratings.
+# Input: Dataset with sentiment scores
+# Output: Boxplot images for exploratory analysis
+# -------------------------------------------------------
+
+
 library(tidyverse)
 
 data <- read.csv('AmazonWithScores.csv') %>% na.omit()
