@@ -36,6 +36,38 @@ testdata.csv – Test dataset (≈20% of observations from AmazonWithScores.csv)
 trainingdata.csv – Training dataset (≈80% of observations). <br>
 Amazonreviews.csv – Raw dataset. <br>
 
-## Section 3: How to reproduce our results
-To reproduce our results from the analysis, take the AnalysisProject1.Rmd and put it into R. You will want to download the AmazonWithScores.csv, testdata.csv, and trainingdata.csv. Put this data in the same folder as AnalysisProject1.Rmd, and run the whole script. This should allow for full reproducibility of the anlysis from the project.
+## Section 3 – Instructions for Reproducing Our Results
+
+Follow these steps to fully reproduce the analyses and figures from this project.
+
+1. **Clone or Download the Repository**  
+   - Clone using Git:  
+     ```bash
+     git clone https://github.com/hildj/DS-4002-Project1.git
+     ```  
+   - Or click **Code → Download ZIP** and extract the folder.
+
+2. **Required Data Files**  
+   Make sure the following CSV files remain in the **same directory** as `AnalysisProject1.Rmd`:
+   - `AmazonWithScores.csv`
+   - `trainingdata.csv`
+   - `testdata.csv`
+
+3. **Software and Packages**  
+   - **R** (version 4.0 or higher) with RStudio recommended.  
+   - Install these R packages if they are not already installed:
+     ```r
+     install.packages(c("tidyverse", "dplyr", "ggplot2",
+                        "tidytext", "caret", "knitr", "rmarkdown"))
+     ```
+
+4. **Run the Analysis**  
+   - Open `AnalysisProject1.Rmd` in RStudio.  
+   - Click **Knit** (or run all code chunks) to execute the script.
+
+5. **Output**  
+   - A knitted HTML or PDF report will be produced containing all plots, tables, and model results that appear in the project deliverables.
+
+These steps will recreate the cleaned dataset analysis, sentiment scoring, and predictive modeling exactly as presented in our report.
+
 
