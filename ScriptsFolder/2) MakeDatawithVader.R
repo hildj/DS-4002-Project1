@@ -1,3 +1,12 @@
+# -------------------------------------------------------
+# Script: MakeDataWithVader.R
+# Purpose: Generate sentiment features using VADER for each review.
+# Key Info: Adds compound, pos, neu, and neg sentiment scores.
+# Defines sentiment categories: positive, neutral, negative.
+# Input: Cleaned CSV from DataCleaning.R
+# Output: CSV with added sentiment scores for analysis
+# -------------------------------------------------------
+
 library(vader)
 library(tidyverse)
 library(stringr)
