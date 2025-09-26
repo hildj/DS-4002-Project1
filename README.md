@@ -17,7 +17,7 @@ This repository contains everything needed to reproduce the analyses and results
 
 ## Section 2: Map of Documentation
 1. OUTPUT Folder
-AnalysisProject1.pdf – Full project analysis with output (coefficients, confusion matrices).
+AnalysisProject1.pdf – Full project analysis with output (coefficients, confusion matrices). <br>
 boxplot.png – Box plot of compound scores vs. review score.
 scatterplot.png – Scatter plot of review score vs. review length by sentiment.
 wordcloud.png – Word cloud visualization.
