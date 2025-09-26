@@ -30,7 +30,7 @@ This repository contains everything needed to reproduce the analyses and results
    F. BoxPlotScript.R - Script to make box plot
    G. MakeDatawithVader.R - Transforming Data with Vader
 3. data folder
-   A. AmazonWithScores.csv - ful data with VADER scores and word length etc
+   A. AmazonWithScores.csv - full data with VADER scores and word length etc
    B. Metadata.md - metadata md file
    C. testdata.csv - test data used on model (about 20 percent of observations from AmazonWithScores.csv)
    D. trainingdata.csv - training data used to fit model (about 80 percent of data)
