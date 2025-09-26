@@ -39,16 +39,3 @@ Amazonreviews.csv – Raw dataset. <br>
 ## Section 3: How to reproduce our results
 To reproduce our results from the analysis, take the AnalysisProject1.Rmd and put it into R. You will want to download the AmazonWithScores.csv, testdata.csv, and trainingdata.csv. Put this data in the same folder as AnalysisProject1.Rmd, and run the whole script. This should allow for full reproducibility of the anlysis from the project.
 
-
-Examples below
-    # Main Heading
-    ## Subheading
-    ### Smaller Subheading
-
-        **Bold text**
-    *Italic text*
-    * Unordered list item 1
-    * Unordered list item 2
-
-    1. Ordered list item 1
-    2. Ordered list item 2
