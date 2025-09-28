@@ -38,11 +38,11 @@ review.UserID (User IDs) will be treated as anonymous identifiers to protect pri
 | Num_Words | Number of words in the review text | 104, 308|
 
 ## Exploratory Plots
-![Wordcloud](../OUTPUT/wordcloud.png)
+![Wordcloud](../OUTPUT/(1)wordcloud.png)
 This word cloud, obtained by finding which words appear the most often in reviews, quickly shows that reviews either focused on loving a product or thinking a product was bad. There are also a lot of words that point out what most of the functionality of the health-related products are.
 
-![Boxplot](../OUTPUT/boxplot.png)
+![Boxplot](../OUTPUT/(3)boxplot.png)
 This box plot shows that a higher compound score generally correlates with a better review score.
 
-![Scatterplot](../OUTPUT/scatterplot.png)
+![Scatterplot](../OUTPUT/(2)scatterplot.png)
 This scatter plot shows the relationship between review score and review length (number of words), with points colored by sentiment category (positive, neutral, negative). It highlights patterns in how review length varies with sentiment and star rating, providing insight into whether longer reviews tend to express stronger positive or negative opinions. This complements our other exploratory plots by adding a structural perspective on review text, supporting feature selection for predictive modeling.
